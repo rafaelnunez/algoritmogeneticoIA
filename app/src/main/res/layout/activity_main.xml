@@ -1,35 +1,224 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.softwaresolutions.algoritmogeneticoia.MainActivity">
+    android:orientation="vertical"
+    android:weightSum="1">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.AppBarOverlay">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="F(x) = x²"
+                android:textSize="50dp"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.04" />
 
-    </android.support.design.widget.AppBarLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Población: [0..31]"
+                android:textSize="20dp"
+                android:id="@+id/tvpoblacion" />
 
-    <include layout="@layout/content_main"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muestra: "
+                android:textSize="20dp"
+                android:id="@+id/tvmuestra"
+                android:layout_weight="0.04" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generar"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.04" />
 
-</android.support.design.widget.CoordinatorLayout>
+            <GridLayout
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:columnCount="3"
+                android:rowCount="5"
+                android:layout_marginTop="40dp"
+                android:elevation="5dp"
+                android:id="@+id/gridLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvindividuos"
+                    android:layout_gravity="left|top"
+                    android:text="Individuos"
+                    android:textSize="20dp"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvbinarios"
+                    android:layout_gravity="left|top"
+                    android:text="Binario"
+                    android:textSize="20dp"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvevaluation"
+                    android:layout_gravity="left|top"
+                    android:text="Evaluación"
+                    android:textSize="20dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tvd1"
+                    android:layout_gravity="left|top"
+                    android:text="1"
+                    android:textSize="15dp"
+                    android:gravity="center_horizontal"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvb1"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tve1"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tv8"
+                    android:layout_gravity="left|top"
+                    android:text="2"
+                    android:textSize="15dp"
+                    android:gravity="center_horizontal"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tvb2"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tve2"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tv11"
+                    android:layout_gravity="left|top"
+                    android:text="3"
+                    android:textSize="15dp"
+                    android:gravity="center_horizontal"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tvb3"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tve3"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tv14"
+                    android:layout_gravity="left|top"
+                    android:text="4"
+                    android:textSize="15dp"
+                    android:gravity="center_horizontal"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvb4"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/tve4"
+                    android:layout_gravity="left|top"
+                    android:text=""
+                    android:textSize="15dp"
+                />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Individuos seleccionados: "
+                android:textSize="20dp"
+                android:id="@+id/tvselectindividuals"
+                android:layout_weight="0.04"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nueva generación: "
+                android:textSize="20dp"
+                android:id="@+id/tvnewgeneration"
+                android:layout_weight="0.04"
+            />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
